@@ -96,7 +96,7 @@ class FeatureExtractor(object):
                             Ys[x][4] = self.somme(total_pax[i][j][:][:]) / 7
                             Ys[x][6] = Ys[x][5] / Ys[x][4]
                         x += 1
-    return Ys
+        return Ys
     
     def transform(self, X_df):
         X_encoded = X_df
