@@ -106,9 +106,10 @@ class FeatureExtractor(object):
         
         #uncomment the line below in the submission
         #path = os.path.dirname(__file__)
+        #data_weather = pd.read_csv(os.path.join(path, "data_weather.csv"))
         #data_weather = pd.read_csv("data_weather.csv")
         
-        air_fares = pd.read_csv("AirFares2012Q1to2013Q2.csv", sep = ';')
+        air_fares = pd.read_csv(os.path.join(path, "AirFares2012Q1to2013Q2.csv"), sep = ';')
         tab = air_fares.values
         # On complète les quarters qui n'existe pas sur un traje par la moyenne des air_fares sur le trajet
         data_air_fares = self.completer_trous(tab)
